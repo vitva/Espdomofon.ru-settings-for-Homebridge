@@ -118,3 +118,16 @@
         }
 
 ```
+
+If you want notifications from the camera in HomeKit during an incoming call, then you need to specify a topic in the plugin settings for your camera
+
+Если хотите уведомления от камеры в HomeKit вовремя входящего звонка, то необходимо указать топик в настройках плагина к вашей камере
+
+Plugin setup [Homebridge Camera FFmpeg](https://github.com/Sunoo/homebridge-camera-ffmpeg): 
+
+```
+"doorbellTopic": "domofon/binary_sensor/domofon_incoming_call/state",
+                 "doorbellMessage": "ON"
+
+```
+
