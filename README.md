@@ -18,17 +18,13 @@
             "name": "Домофон",
             "url": "<url of MQTT server>",
             "topics": {
-                "getLockCurrentState": {
-                    "topic": "domofon/binary_sensor/domofon_incoming_call/state",
-                    "validValues": "OFF"
-                },
-                "getLockTargetState": {
-                    "topic": "domofon/binary_sensor/domofon_incoming_call/state"
-                },
-                "setLockTargetState": {
-                    "topic": "domofon/switch/domofon_accept_call/command"
-                }
+                "getLockCurrentState": "domofon/binary_sensor/domofon_button/state",
+                "getLockTargetState": "domofon/switch/domofon_accept_call/state",
+                "setLockTargetState": "domofon/switch/domofon_accept_call/command",
+                "getOnline": "domofon/status"
             },
+            "onlineValue": "online",
+            "offlineValue": "offline",
             "lockValues": [
                 "ON",
                 "OFF",
@@ -46,73 +42,79 @@
                     "type": "switch",
                     "name": "Автооткр.",
                     "topics": {
-                        "getOn": {
-                            "topic": "domofon/switch/domofon_automatically_open/state"
-                        },
-                        "setOn": "domofon/switch/domofon_automatically_open/command"
+                        "getOn": "domofon/switch/domofon_automatically_open/state",
+                        "setOn": "domofon/switch/domofon_automatically_open/command",
+                        "getOnline": "domofon/status"
                     },
                     "onValue": "ON",
-                    "offValue": "OFF"
+                    "offValue": "OFF",
+                    "onlineValue": "online",
+                    "offlineValue": "offline"
                 },
                 {
                     "type": "switch",
                     "name": "Автооткр.1 раз",
                     "topics": {
-                        "getOn": {
-                            "topic": "domofon/switch/domofon_automatically_open_once/state"
-                        },
-                        "setOn": "domofon/switch/domofon_automatically_open_once/command"
+                        "getOn": "domofon/switch/domofon_automatically_open_once/state",
+                        "setOn": "domofon/switch/domofon_automatically_open_once/command",
+                        "getOnline": "domofon/status"
                     },
                     "onValue": "ON",
-                    "offValue": "OFF"
+                    "offValue": "OFF",
+                    "onlineValue": "online",
+                    "offlineValue": "offline"
                 },
                 {
                     "type": "switch",
                     "name": "Автосброс",
                     "topics": {
-                        "getOn": {
-                            "topic": "domofon/switch/domofon_automatically_reject/state"
-                        },
-                        "setOn": "domofon/switch/domofon_automatically_reject/command"
+                        "getOn": "domofon/switch/domofon_automatically_reject/state",
+                        "setOn": "domofon/switch/domofon_automatically_reject/command",
+                        "getOnline": "domofon/status"
                     },
                     "onValue": "ON",
-                    "offValue": "OFF"
+                    "offValue": "OFF",
+                    "onlineValue": "online",
+                    "offlineValue": "offline"
                 },
                 {
                     "type": "switch",
                     "name": "Сброс вызова",
                     "topics": {
-                        "getOn": {
-                            "topic": "domofon/switch/domofon_reject_call/state"
-                        },
-                        "setOn": "domofon/switch/domofon_reject_call/command"
+                        "getOn": "domofon/switch/domofon_reject_call/state",
+                        "setOn": "domofon/switch/domofon_reject_call/command",
+                        "getOnline": "domofon/status"
                     },
                     "onValue": "ON",
-                    "offValue": "OFF"
+                    "offValue": "OFF",
+                    "onlineValue": "online",
+                    "offlineValue": "offline"
                 },
                 {
                     "type": "switch",
                     "name": "Без звука",
                     "topics": {
-                        "getOn": {
-                            "topic": "domofon/switch/domofon_mute_sound/state "
-                        },
-                        "setOn": "domofon/switch/domofon_mute_sound/command"
+                        "getOn": "domofon/switch/domofon_mute_sound/state ",
+                        "setOn": "domofon/switch/domofon_mute_sound/command",
+                        "getOnline": "domofon/status"
                     },
                     "onValue": "ON",
-                    "offValue": "OFF"
+                    "offValue": "OFF",
+                    "onlineValue": "online",
+                    "offlineValue": "offline"
                 },
                 {
                     "type": "switch",
                     "name": "Без звука 1 раз",
                     "topics": {
-                        "getOn": {
-                            "topic": "domofon/switch/domofon_mute_sound_once/state"
-                        },
-                        "setOn": "domofon/switch/domofon_mute_sound_once/command"
+                        "getOn": "domofon/switch/domofon_mute_sound_once/state",
+                        "setOn": "domofon/switch/domofon_mute_sound_once/command",
+                        "getOnline": "domofon/status"
                     },
                     "onValue": "ON",
-                    "offValue": "OFF"
+                    "offValue": "OFF",
+                    "onlineValue": "online",
+                    "offlineValue": "offline"
                 }
             ]
         }
